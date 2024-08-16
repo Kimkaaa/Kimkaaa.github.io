@@ -1,0 +1,15 @@
+body {
+    background-color: #F6FCFF;
+    background-image: url(../images/main_bg.jpg);
+    background-position: top center;   /* 어디 기준으로 위치시킬지 */
+    background-repeat: no-repeat;
+}
+
+.character {
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;    /* 인라인이라 정렬 안먹음, 블럭요소로 바꿔줘야 */
+    margin-right: auto;
+    /* display: block;       강제로 블럭요소로 바꿈 common에 적용시킴 */
+    margin-bottom: 40px;
+}
