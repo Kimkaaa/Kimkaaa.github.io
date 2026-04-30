@@ -1,0 +1,13 @@
+.contact__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 240px));
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 860px) {
+  .contact__list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

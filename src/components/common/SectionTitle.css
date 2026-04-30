@@ -1,0 +1,23 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 28px;
+  margin-bottom: 32px;
+  color: var(--color-primary);
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    transparent
+  );
+  
+  transform: scaleX(var(--line-progress, 0));
+  transform-origin: left;
+}

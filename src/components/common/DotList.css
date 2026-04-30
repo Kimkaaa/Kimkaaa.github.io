@@ -1,0 +1,22 @@
+.dot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dot-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.dot-list li::before {
+  content: '•';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  color: var(--color-text-sub);
+  font-size: 24px;
+}

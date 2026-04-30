@@ -1,0 +1,81 @@
+.accordion {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  overflow: hidden;
+}
+
+.accordion__summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 20px 22px;
+  color: var(--color-content-title);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion__summary::marker {
+  content: '';
+}
+
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__summary::before {
+  content: '▶';
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+
+  font-size: 12px;
+  line-height: 1;
+
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.accordion[open] .accordion__summary::before {
+  transform: rotate(90deg);
+}
+
+.accordion__content {
+  padding: 0 24px 22px;
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.accordion__content h5 {
+  margin: 22px 0 10px;
+  color: var(--color-text-sub);
+  font-size: 16px;
+}
+
+.accordion__content h5:first-child {
+  margin-top: 0;
+}
+
+.accordion__content p {
+  color: var(--color-text);
+}
+
+.accordion__content code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background-color: var(--color-inline-code-bg);
+  color: inherit;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', monospace;
+  font-size: 0.9em;
+}

@@ -1,0 +1,91 @@
+:root {
+  /* main color */
+  --color-primary: #635985;
+  --color-primary-dark: #352F44;
+
+  /* grayscale */
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-350: #c0c5cf;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #3a3a3a;
+  --color-gray-800: #242424;
+  --color-gray-900: #191919;
+
+  /* semantic color */
+  --color-bg: var(--color-white);
+  --color-header: var(--color-white);
+  --color-surface: #f8f9fb;
+  --color-surface-hover: var(--color-gray-100);
+  --color-border: var(--color-gray-200);
+  --color-inline-code-bg: var(--color-gray-200);
+
+  /* text */
+  --color-text: #111827;
+  --color-text-sub: var(--color-gray-500);
+
+  /* content */
+  --color-content-title: var(--color-primary-dark);
+  --color-content-meta: var(--color-primary);
+
+  /* icon */
+  --color-icon-bg: var(--color-gray-300);
+  --color-icon-bg-hover: var(--color-gray-350);
+  --color-icon-text: var(--color-white);
+
+  --color-point-icon-bg: var(--color-white);
+  --color-point-icon-border: #d8cff5;
+  --color-point-icon-text: var(--color-primary);
+
+  /* radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* shadow */
+  --shadow-card: 0 3px 2px rgba(15, 23, 42, 0.06);
+
+  /* font */
+  --font-weight-active: 600;
+}
+
+[data-theme='dark'] {
+  /* main color */
+  --color-primary: #a78bfa;
+  --color-primary-dark: #8379a1;
+
+  /* semantic color */
+  --color-bg: var(--color-gray-900);
+  --color-header: var(--color-gray-900);
+  --color-surface: var(--color-gray-800);
+  --color-surface-hover: var(--color-gray-700);
+  --color-border: var(--color-gray-700);
+  --color-inline-code-bg: var(--color-gray-700);
+
+  /* text */
+  --color-text: var(--color-gray-100);
+  --color-text-sub: #a3a3a3;
+
+  /* content */
+  --color-content-title: var(--color-white);
+  --color-content-meta: var(--color-primary-dark);
+
+  /* icon */
+  --color-icon-bg: var(--color-bg);
+  --color-icon-bg-hover: var(--color-gray-700);
+  --color-icon-text: var(--color-white);
+
+  --color-point-icon-bg: #2f2b3d;
+  --color-point-icon-border: #5f557d;
+  --color-point-icon-text: #c6bdf2;
+
+  /* shadow */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
