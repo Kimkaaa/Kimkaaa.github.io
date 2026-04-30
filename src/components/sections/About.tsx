@@ -1,14 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import './About.css';
 
 export default function About() {
   const aboutRef = useRef<HTMLElement | null>(null);
   const lastPlayedAtRef = useRef(0);
   const wasVisibleRef = useRef(false);
+  const hasObservedOnceRef = useRef(false);
 
   const [animationKey, setAnimationKey] = useState(0);
 
-  const replayAnimation = () => {
+  const replayAnimation = useCallback(() => {
     const now = Date.now();
 
     // 클릭 이벤트와 IntersectionObserver가 거의 동시에 실행되는 경우 방지
@@ -16,7 +17,7 @@ export default function About() {
 
     lastPlayedAtRef.current = now;
     setAnimationKey((prev) => prev + 1);
-  };
+  }, []);
 
   useEffect(() => {
     const handleReplay = () => {
@@ -28,7 +29,7 @@ export default function About() {
     return () => {
       window.removeEventListener('replay-about-animation', handleReplay);
     };
-  }, []);
+  }, [replayAnimation]);
 
   useEffect(() => {
     const target = aboutRef.current;
@@ -39,6 +40,14 @@ export default function About() {
       ([entry]) => {
         const isVisible = entry.isIntersecting;
 
+        // 첫 관찰 시점에는 이미 CSS 애니메이션이 실행 중이므로 재실행하지 않음
+        if (!hasObservedOnceRef.current) {
+          hasObservedOnceRef.current = true;
+          wasVisibleRef.current = isVisible;
+          return;
+        }
+
+        // About 영역 밖에 있다가 다시 들어올 때만 애니메이션 재실행
         if (isVisible && !wasVisibleRef.current) {
           replayAnimation();
         }
@@ -53,7 +62,7 @@ export default function About() {
     observer.observe(target);
 
     return () => observer.disconnect();
-  }, []);
+  }, [replayAnimation]);
 
   return (
     <section id="about" className="about" ref={aboutRef}>
