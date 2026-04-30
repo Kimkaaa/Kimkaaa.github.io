@@ -20,8 +20,6 @@ export const experiences: Experience[] = [
       'Riverpod',
       'GoRouter',
       'Dio',
-      'json_serializable',
-      'freezed',
     ],
     details: [
       {
