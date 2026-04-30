@@ -3,13 +3,13 @@ import type { Project } from '../types/portfolio';
 export const projects: Project[] = [
   {
     title: '투표 기반 커뮤니티 플랫폼',
-    description: '투표와 실시간 채팅을 중심으로 한 사용자 참여형 플랫폼입니다.',
+    description: '투표와 실시간 채팅을 기반으로 한 사용자 참여형 플랫폼입니다.',
     period: '2025.02.05 - 2025.03.03',
     members: '6명',
     roles: [
       'OAuth 소셜 로그인 및 JWT 인증 구현',
       'GitHub Actions와 AWS 기반 배포 자동화',
-      '닉네임 중복 검사 및 모바일 인증 화면 개선',
+      'DB·API 설계 및 Git 협업 관리',
     ],
     stacks: [
       'Java',
@@ -22,8 +22,6 @@ export const projects: Project[] = [
       'PostgreSQL',
       'WebSocket',
       'Redis',
-      'AWS',
-      'GitHub Actions',
     ],
     githubUrl: 'https://github.com/Kimkaaa/ThisVsThat',
     imageSrc: '/images/projects/this-vs-that.png',
@@ -41,7 +39,7 @@ export const projects: Project[] = [
         ],
         result: [
           '소셜 로그인 방식이 달라도 동일한 인증 흐름을 적용할 수 있었습니다.',
-          '인증 정보를 프론트엔드에서 직접 관리하지 않고 서버 중심으로 인증을 처리할 수 있었습니다.',
+          '인증 정보를 프론트엔드에서 직접 관리하지 않고 서버에서 처리할 수 있었습니다.',
           '인증 이후 사용자 이동 경로를 일관되게 처리할 수 있었습니다.',
         ],
       },
@@ -94,13 +92,13 @@ export const projects: Project[] = [
   },
   {
     title: '금융회사 내부 업무 지원 웹 서비스',
-    description: '고객 관리와 금융 상품 설계·계산을 지원하는 내부 업무용 웹 서비스입니다.',
+    description: '고객 관리와 상품 설계 업무를 지원하는 내부 업무용 웹 서비스입니다.',
     period: '2024.11.12 - 2024.12.02',
     members: '8명',
     roles: [
       '금융 상품 설계 조회 및 계산 로직 구현',
       '설계 진행상태 자동·수동 업데이트',
-      '데이터 정합성 문제 분석 및 문서 협업',
+      '고객 상담 CRUD 및 조건 검색',
     ],
     stacks: [
       'Java',
@@ -111,8 +109,6 @@ export const projects: Project[] = [
       'MyBatis',
       'PostgreSQL',
       'Redis',
-      'AWS',
-      'GitHub Actions',
     ],
     githubUrl: 'https://github.com/Kimkaaa/FinancialProject',
     imageSrc: '/images/projects/financial-project.png',
@@ -139,7 +135,7 @@ export const projects: Project[] = [
         title: '설계 진행상태 자동·수동 업데이트 구현',
         overview: [
           '설계 조회 화면에서는 진행상태를 기준으로 설계 현황을 확인할 수 있도록 했습니다.',
-          '`만기예정`, `만기완료`는 만기일 기준으로 변경되는 상태로 두고 갱신 방식을 구현했습니다.',
+          '이에 따라 `만기예정`, `만기완료`는 만기일 기준으로 변경되는 상태로 두고 갱신 방식을 구현했습니다.',
         ],
         implementation: [
           '스케줄러를 적용해 자정마다 진행상태가 자동 갱신되도록 했습니다.',
@@ -190,9 +186,9 @@ export const projects: Project[] = [
     period: '2024.10.18 - 2024.11.03',
     members: '5명',
     roles: [
-      'Vue와 Thymeleaf 기반 사용자·관리자 페이지 구현',
-      '관리자 경기 관리 및 안내 메일 발송',
-      '관리자 페이지 UI 정리',
+      '사용자·관리자 페이지 분리 구현',
+      '관리자 경기 관리 및 조건 조회',
+      '경기 변동 안내 메일 발송',
     ],
     stacks: [
       'Java',
@@ -206,7 +202,7 @@ export const projects: Project[] = [
     ],
     githubUrl: 'https://github.com/mms-project/MMSVolleyBall',
     imageSrc: '/images/projects/mms-volleyball.png',
-    imageAlt: '배구단 사용자 관리자 웹 서비스 대표 이미지',
+    imageAlt: '배구단 사용자·관리자 웹 서비스 대표 이미지',
     details: [
       {
         title: 'Vue와 Thymeleaf 기반 사용자·관리자 페이지 구현',
