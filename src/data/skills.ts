@@ -1,15 +1,23 @@
 export const skills = [
   {
     category: 'Frontend',
-    items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Vue.js', 'Thymeleaf'],
+    items: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Vue.js',
+      'Thymeleaf',
+      'Tailwind CSS',
+    ],
   },
   {
     category: 'Mobile',
-    items: ['Dart', 'Flutter', 'Riverpod', 'Dio'],
+    items: ['Flutter', 'Dart', 'Riverpod'],
   },
   {
     category: 'Backend',
-    items: ['Java', 'Spring Boot', 'Spring Security', 'JPA', 'MyBatis'],
+    items: ['Java', 'Spring Boot', 'JPA', 'MyBatis', 'Prisma'],
   },
   {
     category: 'Database',
@@ -17,6 +25,6 @@ export const skills = [
   },
   {
     category: 'Tools',
-    items: ['Git', 'AWS', 'Notion', 'Figma', 'Jira', 'Slack'],
+    items: ['Git', 'Notion', 'Figma', 'Jira', 'Slack'],
   },
 ];
