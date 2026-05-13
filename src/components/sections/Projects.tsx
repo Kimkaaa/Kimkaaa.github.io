@@ -61,8 +61,8 @@ export default function Projects() {
           </div>
 
           <div className="section-item__details">
-            {project.details.map((detail, index) => (
-              <Accordion key={detail.title} title={detail.title} defaultOpen={index === 0}>
+            {project.details.map((detail) => (
+              <Accordion key={detail.title} title={detail.title}>
                 {detail.overview && (
                   <>
                     <h5>개요</h5>
@@ -77,8 +77,12 @@ export default function Projects() {
                 <h5>구현</h5>
                 <DotList items={detail.implementation} />
 
-                <h5>결과</h5>
-                <DotList items={detail.result} />
+                {detail.result?.length ? (
+                  <>
+                    <h5>결과</h5>
+                    <DotList items={detail.result} />
+                  </>
+                ) : null}
               </Accordion>
             ))}
           </div>

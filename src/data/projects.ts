@@ -2,12 +2,69 @@ import type { Project } from '../types/portfolio';
 
 export const projects: Project[] = [
   {
+    title: '개인 작업 관리 서비스',
+    description: '진행 단계와 세부 할 일을 정리하는 작업 관리 서비스입니다.',
+    period: '2026.05.06 - 2026.05.11',
+    members: '1명',
+    roles: [
+      'GitHub OAuth 인증',
+      '작업 CRUD 및 체크리스트 관리',
+      '검색·필터링·정렬 및 태그 조회',
+    ],
+    stacks: [
+      'TypeScript',
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'Supabase',
+      'Prisma',
+      'PostgreSQL',
+      'Vercel',
+    ],
+    githubUrl: 'https://github.com/Kimkaaa/Taskflow',
+    imageSrc: '/images/projects/taskflow.png',
+    imageAlt: '개인 작업 관리 서비스 대표 이미지',
+    details: [
+      {
+        title: 'GitHub OAuth 인증',
+        overview: 'Supabase Auth를 사용해 GitHub 로그인을 연동했습니다.',
+        implementation: [
+          '로그인 전 요청 경로를 `next` 값으로 전달하고, OAuth 콜백 이후 해당 경로로 이동하도록 했습니다.',
+          '`next` 값을 검증해 의도하지 않은 경로로 이동하지 않도록 제한했습니다.',
+          '권한이 필요한 서버 액션에서는 현재 사용자와 작업 소유자를 비교한 뒤 처리했습니다.',
+        ],
+      },
+      {
+        title: 'Server Actions 기반 데이터 저장',
+        overview: '작업 등록과 수정은 Next.js Server Actions로 처리했습니다.',
+        implementation: [
+          '기본 정보, 체크리스트, 태그를 함께 저장하기 위해 Prisma 트랜잭션을 사용했습니다.',
+          '태그는 중복을 제거하고, 기존 태그가 있으면 재사용하도록 했습니다.',
+          '입력 단계와 서버 액션에서 입력값을 검증하도록 했습니다.',
+        ],
+      },
+      {
+        title: '조건 기반 목록 조회와 체크리스트 관리',
+        overview: [
+          '작업 목록은 검색, 필터, 정렬 조건에 따라 조회할 수 있도록 했습니다.',
+          '체크리스트를 기반으로 세부 할 일을 관리할 수 있도록 했습니다.',
+        ],
+        implementation: [
+          '#태그명 검색어는 태그 조회로 처리했습니다.',
+          '초기 목록은 서버에서 조회하고, 추가 데이터는 API Route에서 cursor 기준으로 조회했습니다.',
+          '상세 화면에서 항목별 완료 여부를 변경할 수 있도록 했습니다.',
+          '등록 화면에서 체크리스트 항목을 편집하고, 드래그 앤 드롭으로 순서를 변경할 수 있도록 했습니다.',
+        ],
+      },
+    ],
+  },
+  {
     title: '투표 기반 커뮤니티 플랫폼',
     description: '투표와 실시간 채팅을 기반으로 한 사용자 참여형 플랫폼입니다.',
     period: '2025.02.05 - 2025.03.03',
     members: '6명',
     roles: [
-      'OAuth 소셜 로그인 및 JWT 인증 구현',
+      'OAuth 소셜 로그인 및 JWT 인증',
       'GitHub Actions와 AWS 기반 배포 자동화',
       'DB·API 설계 및 Git 협업 관리',
     ],
@@ -28,7 +85,7 @@ export const projects: Project[] = [
     imageAlt: '투표 기반 커뮤니티 플랫폼 대표 이미지',
     details: [
       {
-        title: 'OAuth 소셜 로그인 및 JWT 인증 구현',
+        title: 'OAuth 소셜 로그인 및 JWT 인증',
         overview:
           'Google, Kakao, Naver 소셜 로그인을 적용하고 회원 상태를 구분해 처리했습니다.',
         implementation: [
@@ -96,7 +153,7 @@ export const projects: Project[] = [
     period: '2024.11.12 - 2024.12.02',
     members: '8명',
     roles: [
-      '금융 상품 설계 조회 및 계산 로직 구현',
+      '상품 설계 조회 및 계산',
       '설계 진행상태 자동·수동 업데이트',
       '고객 상담 CRUD 및 조건 검색',
     ],
@@ -115,7 +172,7 @@ export const projects: Project[] = [
     imageAlt: '금융회사 내부 업무 지원 웹 서비스 대표 이미지',
     details: [
       {
-        title: 'MyBatis 기반 설계 조회와 계산 로직 구현',
+        title: 'MyBatis 기반 설계 조회와 계산 처리',
         overview: [
           '설계 조회 화면에서 기본 정보와 함께 만기금액(잔액)을 보여주고자 했습니다.',
           '이때 만기금액은 저장된 값이 아니라 계산이 필요한 값이었고, 상세 데이터는 상품 유형별로 나뉘어 있었습니다.',
@@ -132,7 +189,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: '설계 진행상태 자동·수동 업데이트 구현',
+        title: '설계 진행상태 자동·수동 업데이트',
         overview: [
           '설계 조회 화면에서는 진행상태를 기준으로 설계 현황을 확인할 수 있도록 했습니다.',
           '이에 따라 `만기예정`, `만기완료`는 만기일 기준으로 변경되는 상태로 두고 갱신 방식을 구현했습니다.',
@@ -187,7 +244,7 @@ export const projects: Project[] = [
     members: '5명',
     roles: [
       '사용자·관리자 페이지 분리 구현',
-      '관리자 경기 관리 및 조건 조회',
+      '경기 CRUD 및 다중 조건 조회',
       '경기 변동 안내 메일 발송',
     ],
     stacks: [
@@ -222,7 +279,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: '경기 변동 안내 메일 발송 구현',
+        title: '경기 변동 안내 메일 발송',
         overview: [
           '경기 정보가 변경되거나 취소되면 예매 고객에게 안내가 필요하다고 보고, 관리자 경기 관리 화면에 메일 발송 기능을 추가했습니다.',
           '변경 즉시 자동 발송하기보다, 관리자가 내용을 확인한 뒤 발송할 수 있도록 했습니다.',

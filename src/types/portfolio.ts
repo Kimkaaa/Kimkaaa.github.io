@@ -2,7 +2,7 @@ export interface AccordionItem {
   title: string;
   overview?: string | string[];
   implementation: string[];
-  result: string[];
+  result?: string[];
 }
 
 export interface Experience {
