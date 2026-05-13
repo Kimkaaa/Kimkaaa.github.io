@@ -54,8 +54,12 @@ export default function Experience() {
                 <h5>구현</h5>
                 <DotList items={detail.implementation} />
 
-                <h5>결과</h5>
-                <DotList items={detail.result} />
+                {detail.result?.length ? (
+                  <>
+                    <h5>결과</h5>
+                    <DotList items={detail.result} />
+                  </>
+                ) : null}
               </Accordion>
             ))}
           </div>

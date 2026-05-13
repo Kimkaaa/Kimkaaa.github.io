@@ -12,5 +12,6 @@
 
 ## 기술 스택
 
-- React
 - TypeScript
+- React
+- Vite
