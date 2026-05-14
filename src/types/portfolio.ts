@@ -11,6 +11,7 @@ export interface Experience {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  recordUrl?: string;
   roles: string[];
   stacks: string[];
   details: AccordionItem[];

@@ -8,6 +8,8 @@ export const experiences: Experience[] = [
       '대리점의 결제·수수료 조회와 가맹점 등록·관리 업무를 지원하는 앱으로, 관련 화면 및 기능을 Flutter 기반으로 구현했습니다.',
     imageSrc: '/images/experience/pg-app.png',
     imageAlt: '국내 PG사 대리점 운영 앱 대표 이미지',
+    recordUrl:
+      'https://velog.io/@kimkaaa/series/Flutter-App-%EA%B5%AC%ED%98%84-%EA%B8%B0%EB%A1%9D',
     roles: [
       'Flutter 기반 화면 및 기능 개발',
       '서버 API 연동 및 데이터 처리',

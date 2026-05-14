@@ -1,5 +1,5 @@
-.project__github-cta {
-  --github-bg: var(--color-icon-bg);
+.media-frame-cta {
+  --media-frame-cta-bg: var(--color-icon-bg);
 
   position: absolute;
   right: 18px;
@@ -13,7 +13,7 @@
   transition: transform 0.22s ease;
 }
 
-.project__github-icon {
+.media-frame-cta__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,20 +22,20 @@
   height: 42px;
   border-radius: 50%;
 
-  background-color: var(--github-bg);
+  background-color: var(--media-frame-cta-bg);
   color: var(--color-icon-text);
   font-size: 21px;
 
   box-shadow: var(--shadow-card);
 }
 
-.project__github-bubble {
+.media-frame-cta__bubble {
   position: relative;
 
   padding: 9px 14px 10px 13px;
   border-radius: 16px;
 
-  background-color: var(--github-bg);
+  background-color: var(--media-frame-cta-bg);
   color: var(--color-icon-text);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.14));
 
@@ -55,7 +55,7 @@
     visibility 0.22s ease;
 }
 
-.project__github-bubble::after {
+.media-frame-cta__bubble::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -69,12 +69,12 @@
   transform: translateY(-50%);
 }
 
-.media-frame:is(:hover, :focus-visible) .project__github-cta {
-  --github-bg: var(--color-icon-bg-hover);
+.media-frame:is(:hover, :focus-visible) .media-frame-cta {
+  --media-frame-cta-bg: var(--color-icon-bg-hover);
   transform: translateY(-3px);
 }
 
-.media-frame:is(:hover, :focus-visible) .project__github-bubble {
+.media-frame:is(:hover, :focus-visible) .media-frame-cta__bubble {
   opacity: 1;
   visibility: visible;
   transform: translateX(0) scale(1);

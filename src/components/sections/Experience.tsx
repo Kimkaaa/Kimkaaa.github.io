@@ -1,7 +1,9 @@
+import { FiBookOpen } from 'react-icons/fi';
 import { experiences } from '../../data/experience';
 import Accordion from '../common/Accordion';
 import DetailAccordion from '../common/DetailAccordion';
 import MediaFrame from '../common/MediaFrame';
+import MediaFrameCta from '../common/MediaFrameCta';
 import SectionTitle from '../common/SectionTitle';
 import SummaryBox from '../common/SummaryBox';
 import '../common/SectionItem.css';
@@ -20,7 +22,16 @@ export default function Experience() {
           </div>
 
           <div className="section-item__body">
-            <MediaFrame src={experience.imageSrc} alt={experience.imageAlt} />
+            <MediaFrame
+              src={experience.imageSrc}
+              alt={experience.imageAlt}
+              href={experience.recordUrl}
+              ariaLabel={`${experience.title} 개발 기록 보기`}
+            >
+              {experience.recordUrl ? (
+                <MediaFrameCta label="개발 기록 보기" icon={<FiBookOpen />} />
+              ) : null}
+            </MediaFrame>
 
             <SummaryBox
               className="section-item__summary-desktop"

@@ -3,10 +3,10 @@ import { projects } from '../../data/projects';
 import Accordion from '../common/Accordion';
 import DetailAccordion from '../common/DetailAccordion';
 import MediaFrame from '../common/MediaFrame';
+import MediaFrameCta from '../common/MediaFrameCta';
 import SectionTitle from '../common/SectionTitle';
 import SummaryBox from '../common/SummaryBox';
 import '../common/SectionItem.css';
-import './Projects.css';
 
 export default function Projects() {
   return (
@@ -32,13 +32,9 @@ export default function Projects() {
               href={project.githubUrl}
               ariaLabel={`${project.title} GitHub 이동`}
             >
-              <span className="project__github-cta" aria-hidden="true">
-                <span className="project__github-bubble">코드 보기</span>
-
-                <span className="project__github-icon">
-                  <FiGithub />
-                </span>
-              </span>
+              {project.githubUrl ? (
+                <MediaFrameCta label="코드 보기" icon={<FiGithub />} />
+              ) : null}
             </MediaFrame>
 
             <SummaryBox
