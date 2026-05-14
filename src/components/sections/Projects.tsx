@@ -1,7 +1,7 @@
 import { FiGithub } from 'react-icons/fi';
 import { projects } from '../../data/projects';
 import Accordion from '../common/Accordion';
-import DotList from '../common/DotList';
+import DetailAccordion from '../common/DetailAccordion';
 import MediaFrame from '../common/MediaFrame';
 import SectionTitle from '../common/SectionTitle';
 import SummaryBox from '../common/SummaryBox';
@@ -62,28 +62,7 @@ export default function Projects() {
 
           <div className="section-item__details">
             {project.details.map((detail) => (
-              <Accordion key={detail.title} title={detail.title}>
-                {detail.overview && (
-                  <>
-                    <h5>개요</h5>
-                    {Array.isArray(detail.overview) ? (
-                      <DotList items={detail.overview} />
-                    ) : (
-                      <p>{detail.overview}</p>
-                    )}
-                  </>
-                )}
-
-                <h5>구현</h5>
-                <DotList items={detail.implementation} />
-
-                {detail.result?.length ? (
-                  <>
-                    <h5>결과</h5>
-                    <DotList items={detail.result} />
-                  </>
-                ) : null}
-              </Accordion>
+              <DetailAccordion key={detail.title} detail={detail} />
             ))}
           </div>
         </article>
