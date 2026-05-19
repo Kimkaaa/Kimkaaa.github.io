@@ -26,10 +26,10 @@ export default function Experience() {
               src={experience.imageSrc}
               alt={experience.imageAlt}
               href={experience.recordUrl}
-              ariaLabel={`${experience.title} 개발 기록 보기`}
+              ariaLabel={`${experience.title} 관련 기록 보기`}
             >
               {experience.recordUrl ? (
-                <MediaFrameCta label="개발 기록 보기" icon={<FiBookOpen />} />
+                <MediaFrameCta label="관련 기록 보기" icon={<FiBookOpen />} />
               ) : null}
             </MediaFrame>
 
