@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     ],
     details: [
       {
-        title: 'GoRouter + Riverpod 기반 라우팅과 API 레이어 분리',
+        title: 'GoRouter + Riverpod 라우팅과 API 레이어 분리',
         implementation: [
           '초기 화면 이동은 로그인 여부와 권한 상태에 따라 `GoRouter`의 redirect에서 공통으로 처리했습니다.',
           '전역 진입 규칙은 라우터에서 관리하고, 일반 화면 이동은 라우터에 정의한 경로를 사용해 경로 문자열을 직접 작성하지 않도록 했습니다.',
