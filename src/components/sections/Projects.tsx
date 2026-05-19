@@ -1,4 +1,4 @@
-import { FiGithub } from 'react-icons/fi';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { projects } from '../../data/projects';
 import Accordion from '../common/Accordion';
 import DetailAccordion from '../common/DetailAccordion';
@@ -21,6 +21,19 @@ export default function Projects() {
             <p className="section-item__meta">
               {project.period} · {project.members}
             </p>
+
+            {project.siteUrl ? (
+              <a
+                className="section-item__site-link"
+                href={project.siteUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.title} 배포 사이트 이동`}
+              >
+                <FiExternalLink aria-hidden="true" />
+                배포 사이트
+              </a>
+            ) : null}
 
             <p className="section-item__desc">{project.description}</p>
           </div>

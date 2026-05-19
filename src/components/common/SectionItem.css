@@ -20,6 +20,24 @@
   margin-bottom: 12px;
 }
 
+.section-item__site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  width: fit-content;
+  margin-bottom: 12px;
+
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-item__site-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .section-item__desc {
   color: var(--color-text-sub);
   line-height: 1.6;

@@ -25,6 +25,7 @@ export interface Project {
   roles: string[];
   stacks: string[];
   githubUrl?: string;
+  siteUrl?: string;
   imageSrc: string;
   imageAlt: string;
   details: AccordionItem[];

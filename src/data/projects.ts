@@ -22,6 +22,7 @@ export const projects: Project[] = [
       'Vercel',
     ],
     githubUrl: 'https://github.com/Kimkaaa/Taskflow',
+    siteUrl: 'https://taskflow-ten-eosin.vercel.app',
     imageSrc: '/images/projects/taskflow.png',
     imageAlt: '개인 작업 관리 서비스 대표 이미지',
     details: [
