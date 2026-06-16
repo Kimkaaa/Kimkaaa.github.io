@@ -2,14 +2,15 @@ import type { Project } from '../types/portfolio';
 
 export const projects: Project[] = [
   {
-    title: 'TaskFlow | 개인 작업 관리 서비스',
-    description: '진행 단계와 세부 할 일을 정리하는 작업 관리 서비스입니다.',
-    period: '2026.05.06 - 2026.05.11',
+    title: 'TaskFlow | 작업 관리 서비스',
+    description: '할 일을 정리하고 공유하는 작업 관리 서비스입니다.',
+    period: '2026.05.06 - 2026.06.11',
     members: '1명',
     roles: [
       'GitHub OAuth 인증',
       '작업 CRUD 및 체크리스트 관리',
-      '검색·필터·정렬 및 태그 조회',
+      '그룹 작업 공유 및 초대 링크 관리',
+      '활동 조회 및 계정 관리',
     ],
     stacks: [
       'TypeScript',
@@ -23,8 +24,8 @@ export const projects: Project[] = [
     ],
     githubUrl: 'https://github.com/Kimkaaa/Taskflow',
     siteUrl: 'https://taskflow-ten-eosin.vercel.app',
-    imageSrc: '/images/projects/taskflow.png',
-    imageAlt: '개인 작업 관리 서비스 대표 이미지',
+    imageSrc: '/images/projects/taskflow-new.png',
+    imageAlt: '작업 관리 서비스 대표 이미지',
     details: [
       {
         title: '목록 조회 및 로딩 UX 개선',
@@ -63,7 +64,7 @@ export const projects: Project[] = [
           '`next` 값은 내부 경로만 허용해, 의도하지 않은 경로 이동을 제한했습니다.',
         ],
         result: [
-          '별도 회원가입 없이 서비스를 이용하고 비공개 작업을 관리할 수 있도록 했습니다.',
+          '별도 회원가입 없이 로그인하고 작업을 관리할 수 있도록 했습니다.',
         ],
       },
     ],
